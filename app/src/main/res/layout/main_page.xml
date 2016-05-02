@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svScroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="Car Rental Information"
+            android:layout_marginBottom="5dp"
+            android:background="#979696"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="Cities:"
+            android:layout_marginBottom="5dp"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_cities"
+            android:prompt="@string/spinner_title"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Car Type:"
+            android:layout_marginBottom="5dp"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_types"
+            android:prompt="@string/spinner_type"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Date:"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Time:"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/dateofrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="dd/mm/yy" />
+
+            <Spinner
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/hour"
+                android:prompt="@string/spinner_hour" />
+
+            <Spinner
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/minute"
+                android:prompt="@string/spinner_minute" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="Car Return Information"
+            android:layout_marginBottom="5dp"
+            android:background="#979696"
+            android:textAlignment="center"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="Cities:"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_cities_return"
+            android:prompt="@string/spinner_title" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Date:"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Time:"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/dateofreturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="dd/mm/yy" />
+
+            <Spinner
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/hourofreturn"
+                android:prompt="@string/spinner_hour" />
+
+            <Spinner
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/minuteofreturn"
+                android:prompt="@string/spinner_minute" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:id="@+id/btn_logout"
+                android:onClick="logOut"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:id="@+id/btn_search"
+                android:onClick="searchAvailableCars"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
